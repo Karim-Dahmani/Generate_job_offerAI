@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation de la Lettre</title>
+</head>
+<body>
+    <h2>✅ Vérifiez votre lettre de motivation</h2>
+
+    <form action="/send" method="POST">
+        <input type="hidden" name="to_email" value="{{ to_email }}">
+        <input type="hidden" name="company" value="{{ company }}">
+        <input type="hidden" name="job_title" value="{{ job_title }}">
+        <input type="hidden" name="cv_path" value="{{ cv_path }}">
+
+        <label for="cover_letter">Lettre de motivation :</label>
+        <textarea name="cover_letter" rows="10" cols="60">{{ cover_letter }}</textarea>
+
+        <br><br>
+        <button type="submit">📩 Envoyer la candidature</button>
+    </form>
+</body>
+</html>

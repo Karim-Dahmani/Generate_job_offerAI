@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Générer une Lettre de Motivation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 20px;
+        }
+        h2 {
+            color: #333;
+        }
+        form {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            margin: auto;
+        }
+        label {
+            font-weight: bold;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="file"] {
+            border: none;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>📩 Générer une Lettre de Motivation</h2>
+
+    <form action="/" method="POST" enctype="multipart/form-data">
+        <label for="company">Nom de l'entreprise :</label>
+        <input type="text" id="company" name="company" required>
+
+        <label for="to_email">Email du recruteur :</label>
+        <input type="email" id="to_email" name="to_email" required>
+
+        <label for="job_title">Titre du poste :</label>
+        <input type="text" id="job_title" name="job_title" placeholder="Ex : Développeur Full-Stack">
+
+        <label for="job_description">Description du poste :</label>
+        <textarea id="job_description" name="job_description" rows="4" placeholder="Copiez la description ici..."></textarea>
+
+        <label for="job_url">Ou lien de l'offre :</label>
+        <input type="url" id="job_url" name="job_url" placeholder="Ex : https://www.linkedin.com/job/...">
+
+        <label for="cv_file">Téléchargez votre CV (PDF) :</label>
+        <input type="file" id="cv_file" name="cv_file" accept=".pdf" required>
+
+        <button type="submit">📝 Générer la lettre</button>
+    </form>
+
+</body>
+</html>
